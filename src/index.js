@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 //const element = React.createElement('hi', null, 'Hello React World');
 const element = (
     <div>
@@ -13,5 +13,6 @@ const element = (
         </ul>
     </div>
     );
-    ReactDOM.render(element,
-        document.getElementById('root'));
+    const root = document.getElementById("root");
+const reactRoot = ReactDOM.createRoot(root); // React 18 method
+reactRoot.render(element);
